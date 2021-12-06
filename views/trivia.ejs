@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../public/trivia.css">
+        <title>Trivia Page</title>
+    </head>
+    <body>
+        <nav>
+            <li>
+                <a href="/">Home</a>
+                <a href="/my_resume">Resume</a>
+                <a href="/my_fun_facts">Fun Facts</a>
+                <a href="/blog">Blog</a>
+                <a href="/trivia">Trivia</a>
+            </li>
+        </nav>
+            <h1>Welcome To Joshua Pagonas's Website Portfolio
+                    <i class="fas fa-crown fa-1x">
+                    </i>
+            </h1>
+        <h1>Trivia Page</h1>
+        <div style="text-align: center;">
+            <h3>What is 2 + 2</h3>
+            <form action="/triviaOne" method="post" onsubmit="document.getElementById('submitOne').disabled=true;">
+                <p>A. 22</p>
+                <p>B. 2</p>
+                <p>C. 44</p>
+                <p>D. 4</p>
+                <input type="text" id="answerOne" name="nameOne"><br><br>
+                <button type="submit" id="submitOne">Submit</button>
+            </form>
+            <% if (locals.answers){ %>
+                <% if(answers.length >= 1){ %>
+                    <h1><%= answers[0]%></h1>
+                <% } %>
+            <% } %>
+            <h3>What is 2 * 2</h3>
+            <form action="/triviaTwo" method="post">
+                <p>A. 2</p>
+                <p>B. 4</p>
+                <p>C. 44</p>
+                <p>D. 22</p>
+                <input type="text" id="answerTwo" name="nameTwo"><br><br>
+                <input type="submit" id="submitTwo">
+            </form>
+            <% if (locals.answers){ %>
+                <% if(answers.length >= 2){ %>
+                    <h1><%= answers[1]%></h1>
+                <% } %>
+            <% } %>
+            <h3>What is 4 * 2</h3>
+            <form action="/triviaThree" method="post">
+                <p>A. 8</p>
+                <p>B. 42</p>
+                <p>C. 24</p>
+                <p>D. 442</p>
+                <input type="text" id="answerThree" name="nameThree"><br><br>
+                <input type="submit" id="submitTwo">
+            </form>
+            <% if (locals.answers){ %>
+                <% if(answers.length >= 3){ %>
+                    <h1><%= answers[2]%></h1>
+                <% } %>
+            <% } %>
+            <h3>2 * 4</h3>
+            <form action="/triviaFour" method="post">
+                <p>A. 24</p>
+                <p>B. 42</p>
+                <p>C. 8</p>
+                <p>D. 422</p>
+                <input type="text" id="answerFour" name="nameFour"><br><br>
+                <input type="submit" id="submitTwo">
+            </form>
+            <% if (locals.answers){ %>
+                <% if(answers.length >= 4){ %>
+                    <h1><%= answers[3]%></h1>
+                <% } %>
+            <% } %>
+            <h3>What is 2 * 4 * 6 * 8 * 10</h3>
+                <p>A. 246810</p>
+                <p>B. 3840</p>
+                <p>C. 3480</p>
+                <p>D. 108642</p>
+            <form action="/triviaFive" method="post">
+                <input type="text" id="answerFive" name="nameFive"><br><br>
+                <input type="submit" id="submitTwo">
+            </form>
+            <% if (locals.answers){ %>
+                <% if(answers.length >= 5){ %>
+                    <h1><%= answers[4]%></h1>
+                <% } %>
+            <% } %>
+            <h3>What is 2 * 4 * 6 * 8 * 10 * 12 * 14 * 16 * 18 * 20</h3>
+            <form action="/triviaSix" method="post">
+                <p>A. 3715891200</p>
+                <p>B. 2468101214161820</p>
+                <p>C. 3480</p>
+                <p>D. 108642</p>
+                <input type="text" id="answerSix" name="nameSix"><br><br>
+                <input type="submit" id="submitTwo" style="margin-bottom: 10px;">
+            </form>
+            <% if (locals.answers){ %>
+                <% if(answers.length >= 6){ %>
+                    <h1><%= answers[5]%></h1>
+                <% } %>
+            <% } %>
+            <button onclick="showScore(this);">Total Score</button>
+            <% if(locals.globalScore){ %>
+                <h1 id="totalScore" style="display: none;">Overall Score: <%=globalScore %></h1>
+            <% } %>
+        </div>
+    </body>
+    <footer class="footer">
+        <ul style="list-style: none;">
+            <li style="list-style: none;">
+                &copy; Joshua Pagonas 2021.
+                <a href="https://www.linkedin.com/in/joshua-pagonas-0896511a4/"><i class="fab fa-linkedin fa-1x"></i></a>
+                <a href="https://www.linkedin.com/in/joshua-pagonas-0896511a4/">LinkedIn Profile</a>
+                <a href="https://github.com/joshuapagonas"><i class="fab fa-github fa-1x"></i></a>
+                <a href="https://github.com/joshuapagonas">Github Profile</a><br>
+            </li>
+        </ul>
+    </footer>
+    <script>
+        function hideElements(x) {
+            x.style.display = 'none';
+        }
+    </script>
+    <script>
+        function showScore(x) {
+            x.style.display = 'none';
+            let totalScore = document.getElementById('totalScore');
+            totalScore.style.display = 'block';
+        }
+    </script>
+</html>
