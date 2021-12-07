@@ -32,7 +32,7 @@
                 <button type="submit" id="submitOne">Submit</button>
             </form>
             <% if (locals.answers){ %>
-                <% if(answers.length >= 1){ %>
+                <% if(answers.length >= 1 && answers.length <= 6){ %>
                     <h1><%= answers[0]%></h1>
                 <% } %>
             <% } %>
@@ -46,7 +46,7 @@
                 <input type="submit" id="submitTwo">
             </form>
             <% if (locals.answers){ %>
-                <% if(answers.length >= 2){ %>
+                <% if(answers.length >= 2 && answers.length <= 6){ %>
                     <h1><%= answers[1]%></h1>
                 <% } %>
             <% } %>
@@ -60,7 +60,7 @@
                 <input type="submit" id="submitTwo">
             </form>
             <% if (locals.answers){ %>
-                <% if(answers.length >= 3){ %>
+                <% if(answers.length >= 3 && answers.length <= 6){ %>
                     <h1><%= answers[2]%></h1>
                 <% } %>
             <% } %>
@@ -74,7 +74,7 @@
                 <input type="submit" id="submitTwo">
             </form>
             <% if (locals.answers){ %>
-                <% if(answers.length >= 4){ %>
+                <% if(answers.length >= 4 && answers.length <= 6){ %>
                     <h1><%= answers[3]%></h1>
                 <% } %>
             <% } %>
@@ -88,7 +88,7 @@
                 <input type="submit" id="submitTwo">
             </form>
             <% if (locals.answers){ %>
-                <% if(answers.length >= 5){ %>
+                <% if(answers.length >= 5 && answers.length <= 6){ %>
                     <h1><%= answers[4]%></h1>
                 <% } %>
             <% } %>
@@ -102,7 +102,7 @@
                 <input type="submit" id="submitTwo" style="margin-bottom: 10px;">
             </form>
             <% if (locals.answers){ %>
-                <% if(answers.length >= 6){ %>
+                <% if(answers.length == 6){ %>
                     <h1><%= answers[5]%></h1>
                 <% } %>
             <% } %>

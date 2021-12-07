@@ -109,5 +109,8 @@ app.post('/triviaSix', (req, res) => {
         answers.push(`The answer is Incorrect.`);
     }
 });
+if(globalScore == 6){
+    globalScore = 0;
+}
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, ()=> console.log('running on port 3000'));
