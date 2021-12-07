@@ -4,7 +4,26 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.15"
   },
+  "name": "csi-2520-hw-5",
+  "version": "1.0.0",
+  "description": "HW 5 CSI 2520",
+  "main": "index.js",
   "scripts": {
-    "start": "node index"
-  }
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuapagonas/joshuapagonas-hw5-csi2520.git"
+  },
+  "keywords": [
+    "node.js",
+    "javascript"
+  ],
+  "author": "Joshua Pagonas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuapagonas/joshuapagonas-hw5-csi2520/issues"
+  },
+  "homepage": "https://github.com/joshuapagonas/joshuapagonas-hw5-csi2520#readme"
 }
